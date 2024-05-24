@@ -1,4 +1,4 @@
-import db from 'database/models';
+import db from '../../../../database/models'
 
 export default function handler(req, res) {
     switch(req.method){

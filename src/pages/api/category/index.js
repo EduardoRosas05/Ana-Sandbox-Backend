@@ -1,4 +1,4 @@
-import db from 'database/models';
+import db from '../../../../database/models'
 
 export default function handler(req, res) {
     switch(req.method){
@@ -53,7 +53,7 @@ const listCategory = async (req, res) => {
             console.log(req.body);
             //guardar cliente
         const category = await db.Category.findAll({
-            
+        
         });
             
             return res.json(category)

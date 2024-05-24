@@ -7,10 +7,10 @@ module.exports = (sequelize, DataTypes) => {
     
     static associate(models) {
       //crear las asociaciones 
-      models.Order.hasMany(models.Product, {
-        as: 'orderPro',
-        foreignKey: 'ordForKey'
-      });
+      // models.Order.hasMany(models.Product, {
+      //   as: 'orderPro',
+      //   foreignKey: 'ordForKey'
+      // });
     }
   }
   Order.init({
@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     lugar_de_entrega: DataTypes.STRING,
     listado_de_productos: DataTypes.STRING,
     nombre_del_cliente: DataTypes.STRING,
-    nombre_del_encargado: DataTypes.STRING
+    nombre_del_encargado: DataTypes.STRING,
+    ordForKey:  DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Order',

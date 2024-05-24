@@ -7,10 +7,10 @@ module.exports = (sequelize, DataTypes) => {
     
     static associate(models) {
       //crear las asociaciones 
-      models.Category.hasMany(models.Product, {
-        as: 'categoryPro',
-        foreignKey: 'proForKey'
-      });
+      // models.Category.hasMany(models.Product, {
+      //   as: 'categoryPro',
+      //   foreignKey: 'proForKey'
+      // });
     }
   }
   Category.init({
