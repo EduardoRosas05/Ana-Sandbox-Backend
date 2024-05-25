@@ -53,7 +53,7 @@ const listCategory = async (req, res) => {
             console.log(req.body);
             //guardar cliente
         const category = await db.Category.findAll({
-        
+            include: ['nombre', 'codigo']
         });
             
             return res.json(category)

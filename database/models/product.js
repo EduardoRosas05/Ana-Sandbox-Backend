@@ -7,15 +7,15 @@ module.exports = (sequelize, DataTypes) => {
     
     static associate(models) {
       //crear las asociaciones 
-      // models.Product.hasOne(models.Category, {
-      //   as: 'productCat',
-      //   foreignKey: 'proForKey'
-      // });
+      models.Product.hasMany(models.Category, {
+        as: 'productCat',
+        foreignKey: 'proForKey'
+      });
 
-      // models.Product.BelongsToMany(models.Order, {
-      //   as: 'productOrd',
-      //   foreignKey: 'ordForKey'
-      // });
+      models.Product.hasMany(models.Order, {
+        as: 'productOrd',
+        foreignKey: 'ordForKey'
+      });
     
     }
   }
